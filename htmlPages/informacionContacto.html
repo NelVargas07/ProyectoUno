@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/footer.css">
+    <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <link rel="stylesheet" type="text/css" href="/css/informacionContacto.css">
+    <title>Informacion de Contacto</title>
+</head>
+<body>
+    <header>
+        <h1>Clinica Arbol de Seda</h1>
+        <nav>
+            <ul class="header">
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="/htmlPages/iniciosesion.html">Iniciar Sesion</a></li>
+                <li><a href="/htmlPages/agendaCita.html">Agendar Cita</a></li>
+                <li><a href="/htmlPages/busquedaMedico.html">Buscar Medico</a></li>
+                <li><a href="/htmlPages/servicios.html">Servicios</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="contenedor">
+            <div class="articulos">
+                <div class="titulo">
+                    <h2>Informacion de Contacto</h2>
+                </div>
+                <div class="informacion">
+                    <br>
+                    <p>Empresa: Clínica Árbol de Seda</p>
+                    <br>
+                    <p>Direccion: Universidad de Costa Rica - Sede del Atlántico,Turrialba, Cartago
+                        Costa Rica</p>
+                        <br>
+                    <p>Telefono: 8888-8888</p>
+                </div>
+                <br>
+                <div class="mapa">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38274.112944769615!2d-83.69980758593155!3d9.90876595004393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0d42417bc6851%3A0xd2ae13fcaa9ce072!2sUniversidad%20de%20Costa%20Rica%20(Sede%20del%20Atl%C3%A1ntico)!5e0!3m2!1ses-419!2scr!4v1711719113843!5m2!1ses-419!2scr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <form class="formulario" action="post">
+                <h2>Contactenos</h2>
+                <div class="usuario">
+                    <label>Nombre Completo</label>
+                    <input id="nombre" type="text" required>
+                </div>
+                <div class="usuario">
+                    <label>Correo</label>
+                    <input id="correo" type="email" required>
+                </div>
+                <div class="usuarios">
+                    <label>Tipo de consulta: </label>
+                    <select id="tipoConsulta" class="select">
+                        <option value="General">General</option>
+                        <option value="Pediatría">Pediatría</option>
+                        <option value="Ginecología y Obstetricia">Ginecología y Obstetricia</option>
+                        <option value="Cardiología">Cardiología</option>
+                        <option value="Oftalmología">Oftalmología</option>
+                    </select>
+                </div>
+                <div class="usuario">
+                    <label>Consulta</label>
+                    <textarea id="consulta" required></textarea>
+                </div>
+                <input id="BotonConsulta" type="submit" value="Consultar">
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <div class="links">
+                <nav>
+                    <ul class="footer">
+                        <li><a href="/htmlPages/sobreNosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="/htmlPages/politicas.html">Politicas</a></li>
+                        <li><a href="/htmlPages/informacionContacto.html">Infomacion de Contacto</a></li>
+                        <li><a href="/htmlPages/faq.html">Preguntas frecuentes</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <p>Siguenos en nuestras redes sociales</p>
+            <div class="imagenes">
+                <a href="https://www.facebook.com/profile.php?id=100008318240123">
+                    <img src="/img/facebook.png" alt="facebook" >
+                </a>
+                <a href="https://www.instagram.com/nel_vargas_07/">
+                    <img src="/img/instagram.png" alt="instagram" >
+                </a>
+                <a href="https://twitter.com/Nel_Vargas_07">
+                    <img src="/img/twitter.jpeg" alt="twitter" >
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

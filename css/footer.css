@@ -1,0 +1,36 @@
+footer{
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(37, 44, 44);
+    color: aliceblue;
+    text-align: center;
+    padding: 5px 0;
+}
+
+footer p{
+    margin-bottom: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+footer a{
+    color: antiquewhite;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover{
+    color: black;
+}
+
+footer p{
+    text-align: center;
+}
+
+.imagenes{
+    text-align: center;
+}
+.imagenes a img{
+    border-radius: 10px;
+    width: 30px;
+    height: 30px;
+}
