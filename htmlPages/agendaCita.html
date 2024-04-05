@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/css/header.css">
     <link rel="stylesheet" type="text/css" href="/css/footer.css">
+    <link rel="stylesheet" type="text/css" href="/css/agendarCita.css">
+    <script src="/js/medicos.js"></script>
+    <script src="/js/agendarCita.js"></script>
     <title>Sobre Nosotros</title>
 </head>
 <body>
     <header>
-        <h1>Clinica Arbol de Seda</h1>
+        <h1><a href="/index.html"> Clinica Arbol de Seda</a></h1>
         <nav>
             <ul class="header">
                 <li><a href="/index.html">Inicio</a></li>
@@ -21,7 +24,68 @@
         </nav>
     </header>
     <main>
+        <div class="contenido">
+            <div class="articulos">
+                <form id="formulario" method="post">
+                    <div class="usuarios">
+                        <label>Fecha: </label>
+                        <input id="fecha" type="date" required>
+                    </div>
+                    <div class="usuarios">
+                        <label>Hora: </label>
+                        <input id="hora" type="time" >
+                    </div>
+                    <div class="usuarios">
+                        <label>Especialidad: </label>
+                        <select id="especialidad" name="especialidad" required>
+                            <option value="">Seleccionar Especialidad</option>
+                            <option value="medicina general">Medicina general</option>
+                            <option value="Ginecología y Obstetricia">Ginecología y Obstetricia</option>
+                            <option value="cardiologia">Cardiología</option>
+                            <option value="oftalmologia">Oftalmologia</option>
+                            <option value="pediatria">Pediatría</option>
+                        </select>
+                    </div>
+                    <div class="usuarios">
+                        <label>Medicos: </label>
+                        <select id="medico" name="medico" required>
+                            <option value="">Seleccionar Médico</option>
+                        </select>
+                    </div>
+                    <input id="botonAgendar" type="submit" value="Agendar">
+                </form>
+            </div>
+            <div class="calendario">
+                <div class="popup-overlay" id="popup-overlay"></div>
+                <div class="popup" id="popup">
+                    <h2>Detalles de la cita</h2>
+                    <p id="cita-info"></p>
+                    <button onclick="cancelarCita()">Cancelar Cita</button>
+                </div>
 
+                <div class="botones">
+                    <button class="boton" onclick="mostrarMes(-1)">Mes Anterior</button>
+                    <span id="mesYAnio"></span>
+                    <button class="boton" onclick="mostrarMes(1)">Mes Siguiente</button>
+                </div>
+
+                <table id="calendario">
+                    <thead>
+                        <tr>
+                        <th>Lunes</th>
+                        <th>Martes</th>
+                        <th>Miércoles</th>
+                        <th>Jueves</th>
+                        <th>Viernes</th>
+                        <th>Sábado</th>
+                        <th>Domingo</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dias">
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </main>
     <footer>
         <div>

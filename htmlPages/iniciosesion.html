@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/css/header.css">
     <link rel="stylesheet" type="text/css" href="/css/footer.css">
-    <title>Sobre Nosotros</title>
+    <link rel="stylesheet" type="text/css" href="/css/inicioSesion.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src= "/js/inicioSesion.js"></script>
+    <title>Iniciar Sesion</title>
 </head>
 <body>
     <header>
-        <h1>Clinica Arbol de Seda</h1>
+        <h1><a href="/index.html"> Clinica Arbol de Seda</a></h1>
         <nav>
             <ul class="header">
                 <li><a href="/index.html">Inicio</a></li>
@@ -21,7 +24,29 @@
         </nav>
     </header>
     <main>
-
+        <div class="contenido">
+            <div class="formulario">
+                <h2>Iniciar Sesion</h2>
+                <form id="formulario" method="post">
+                    <div class="usuarios">
+                        <label>Numero de Cedula: </label>
+                        <input id="cedula" type="text" pattern="\d{2}-\d{4}-\d{4}" title="Formato válido: 0#-####-####" required>
+                    </div>
+                    <div class="usuarios">
+                        <label>Contraseña: </label>
+                        <input id="password" type="password" required>
+                    </div>
+                    <input id="botonIngresar" type="submit" value="Ingresar">
+                    
+                </form>
+                <br>
+                <div class="conteiner_opciones">
+                    <a href="registro.html">Registrarse</a>
+                    <a href="registrar.html">Recuperar password</a>
+                </div>
+            </div>
+            
+       </div>
     </main>
     <footer>
         <div>

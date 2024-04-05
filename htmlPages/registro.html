@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/css/header.css">
     <link rel="stylesheet" type="text/css" href="/css/footer.css">
-    <title>Sobre Nosotros</title>
+    <link rel="stylesheet" type="text/css" href="/css/registro.css">
+    <script src="/js/registro.js"></script>
+    <title>Registro</title>
 </head>
 <body>
     <header>
-        <h1>Clinica Arbol de Seda</h1>
+        <h1><a href="/index.html"> Clinica Arbol de Seda</a></h1>
         <nav>
             <ul class="header">
                 <li><a href="/index.html">Inicio</a></li>
@@ -21,7 +23,42 @@
         </nav>
     </header>
     <main>
-
+        <div class="contenido">
+            <div class="formulario">
+                <h2>Registro</h2>
+                <form id="formulario" method="post">
+                    <div class="usuarios">
+                        <label>Numero de Cedula: </label>
+                        <input id="cedula" type="text" pattern="\d{2}-\d{4}-\d{4}" title="Formato válido: 0#-####-####" required >
+                    </div>
+                    <div class="usuarios">
+                        <label>Nombre: </label>
+                        <input id="nombre" type="text" title="Maximo 20 caracteres"  required>
+                    </div>
+                    <div class="usuarios">
+                        <label>Apellidos: </label>
+                        <input id="apellidos" type="text" title="Maximo 30 caracteres" required>
+                    </div>
+                    <div class="usuarios">
+                        <label>Telefono: </label>
+                         <input type="text" id="telefono" pattern="\d{4}-\d{4}" title="Formato valido ####-####" required>
+                    </div>
+                    <div class="usuarios">
+                        <label>Correo: </label>
+                        <input id="correo" type="email" required>
+                    </div>
+                    <div class="usuarios">
+                        <label>Contraseña: </label>
+                        <input id="password" type="password" title="Debe contener minimo: una minuscula, una Mayuscula, caracter especial y un numero. Debe tener entre 8 a 11 caracteres" required>
+                    </div>
+                    <div class="usuarios">
+                        <label>Confirmar Contraseña: </label>
+                        <input id="confirmPassword" type="password" required>
+                    </div>
+                    <input id="botonRegistrar" type="submit" value="Registrarse">
+                </form>
+            </div>
+           </div>
     </main>
     <footer>
         <div>

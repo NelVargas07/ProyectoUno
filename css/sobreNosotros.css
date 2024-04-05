@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body{
+    width: 100%;
+    background-color: rgb(184, 189, 193);
+}
+
+.contenedor{
+    flex: 1;
+}
+
+.descripcion{
+    display: block;
+    text-align: center;
+    padding: 20px;
+}
+
+.descripcion .Mision, .vision, .valores{
+    bottom: 50px;
+    margin-bottom: 20px;
+    text-align: justify;
+    font-size: 1.2em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h3,h4{
+    color: brown;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+p{
+    text-align: justify;
+    margin-left: 200px;
+    margin-right: 200px;
+}

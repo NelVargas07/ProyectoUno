@@ -1,11 +1,12 @@
 footer{
-    bottom: 0;
+    bottom: 0px;
     width: 100%;
     background-color: rgb(37, 44, 44);
     color: aliceblue;
     text-align: center;
     padding: 5px 0;
 }
+
 
 footer p{
     margin-bottom: 10px;
