@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <link rel="stylesheet" type="text/css" href="/css/footer.css">
+    <title>Sobre Nosotros</title>
+</head>
+
+<body>
+    <header>
+    </header>
+    <main>
+        <h2>Lista de Citas</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Nombre del Paciente</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-citas-body">
+                <!-- Aquí se cargarán dinámicamente las citas desde JavaScript -->
+            </tbody>
+        </table>
+        <script>
+            function cargarCitasDesdeLocalStorage() {
+                const citasGuardadas = localStorage.getItem('citas');
+                if (citasGuardadas) {
+                    const citas = JSON.parse(citasGuardadas);
+                    const tablaBody = document.getElementById('tabla-citas-body');
+                    tablaBody.innerHTML = '';
+                    citas.forEach(cita => {
+                        const fila = document.createElement('tr');
+                        fila.innerHTML = `
+                        <td>${cita.fecha}</td>
+                        <td>${cita.hora}</td>
+                        <td>${cita.cedulaUsuario}</td>
+                        <td>${cita.estado}</td>
+                        <td>
+                            <button onclick="aceptarCita('${cita.fecha}', '${cita.hora}', '${cita.cedulaUsuario}')">Aceptar</button>
+                            <button onclick="rechazarCita('${cita.fecha}', '${cita.hora}', '${cita.cedulaUsuario}')">Rechazar</button>
+                            <button onclick="EsperaCita('${cita.fecha}', '${cita.hora}', '${cita.cedulaUsuario}')">Espera</button>
+                        </td>
+                    `;
+                        tablaBody.appendChild(fila);
+                    });
+                } else {
+                    console.log('No hay citas guardadas en el localStorage');
+                }
+            }
+
+            function aceptarCita(fecha, hora, cedulaUsuario) {
+                // Buscar la cita en el localStorage
+                const citasGuardadas = localStorage.getItem('citas');
+                if (citasGuardadas) {
+                    const citas = JSON.parse(citasGuardadas);
+                    const citaAceptada = citas.find(cita => cita.fecha === fecha && cita.hora === hora && cita.cedulaUsuario === cedulaUsuario);
+                    if (citaAceptada) {
+                        // Cambiar el estado de la cita a "confirmada"
+                        citaAceptada.estado = 'confirmada';
+                        // Guardar las citas actualizadas en el localStorage
+                        localStorage.setItem('citas', JSON.stringify(citas));
+                        // Recargar la lista de citas
+                        cargarCitasDesdeLocalStorage();
+                        alert('cambio efectuado');
+                    }
+                }
+            }
+
+            function EsperaCita(fecha, hora, cedulaUsuario) {
+                // Buscar la cita en el localStorage
+                const citasGuardadas = localStorage.getItem('citas');
+                if (citasGuardadas) {
+                    const citas = JSON.parse(citasGuardadas);
+                    const citaAceptada = citas.find(cita => cita.fecha === fecha && cita.hora === hora && cita.cedulaUsuario === cedulaUsuario);
+                    if (citaAceptada) {
+                        // Cambiar el estado de la cita a "confirmada"
+                        citaAceptada.estado = 'pendiente';
+                        // Guardar las citas actualizadas en el localStorage
+                        localStorage.setItem('citas', JSON.stringify(citas));
+                        // Recargar la lista de citas
+                        cargarCitasDesdeLocalStorage();
+                        alert('cambio efectuado');
+                    }
+                }
+            }
+
+            function rechazarCita(fecha, hora, cedulaUsuario) {
+                const citasGuardadas = localStorage.getItem('citas');
+                if (citasGuardadas) {
+                    let citas = JSON.parse(citasGuardadas);
+                    console.log('Citas antes de eliminar:', citas); // Agrega esta línea para imprimir las citas antes de eliminar
+                    citas = citas.filter(cita => !(cita.fecha === fecha && cita.hora === hora && cita.cedulaUsuario === cedulaUsuario));
+                    console.log('Citas después de eliminar:', citas); // Agrega esta línea para imprimir las citas después de eliminar
+                    localStorage.setItem('citas', JSON.stringify(citas));
+                    cargarCitasDesdeLocalStorage();
+                    alert('cita eliminada');
+                }
+            }
+
+            window.onload = cargarCitasDesdeLocalStorage;
+        </script>
+    </main>
+    <footer>
+    </footer>
+    <script src="/js/header.js"></script>
+    <script src="/js/footer.js"></script>
+</body>
+
+</html>

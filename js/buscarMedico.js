@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded",()=>{
     fillTable();
-    console.log(data);
 });
 
 // Variables para la paginación

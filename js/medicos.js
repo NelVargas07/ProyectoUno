@@ -1,9 +1,9 @@
 const data = [
     {
         nombre: "Dra. María González Pérez",
-        especialidad: "Ginecología y Obstetricia",
-        ubicacion: "Clínica Infantil Sonrisas, Av. Juárez #123, Ciudad de México",
-        horarios: "Lunes a viernes de 9:00 a.m. a 5:00 p.m.",
+        especialidad: "Ginecologia y Obstetricia",
+        ubicacion: "Piso 2",
+        horarios: "9:00 a 18:00",
         contacto: {
             telefono: "(55) 1234-5678",
             correo: "mgonzalez@clinicasomrisas.com"
@@ -13,8 +13,9 @@ const data = [
     },
     {
         nombre: "Dr. Carlos Sánchez Rodríguez",
-        especialidad: "medicina general",
-        ubicacion: "Piso ",
+        especialidad: "Medicina General",
+        ubicacion: "Piso 1",
+        dias : "Lunes a Viernes",
         horarios: "Martes y jueves de 10:00 a.m. a 2:00 p.m.",
         contacto: {
             telefono: "+34 123 456 789",
@@ -25,8 +26,8 @@ const data = [
     },
     {
         nombre: "Dra. Ana Martínez López",
-        especialidad: "Ginecología y Obstetricia",
-        ubicacion: "Clínica de Dermatología y Estética, Calle Gran Vía #789, Madrid, España",
+        especialidad: "Ginecologia y Obstetricia",
+        ubicacion: "Piso 2",
         horarios: "Lunes, miércoles y viernes de 8:00 a.m. a 4:00 p.m.",
         contacto: {
             telefono: "+34 987 654 321",
@@ -37,8 +38,8 @@ const data = [
     },
     {
         nombre: "Dr. Juan Pérez García",
-        especialidad: "Cardiología",
-        ubicacion: "Hospital del Corazón, Carrera 10 #456, Bogotá, Colombia",
+        especialidad: "Cardiologia",
+        ubicacion: "Piso 3",
         horarios: "Martes y jueves de 9:00 a.m. a 1:00 p.m.",
         contacto: {
             telefono: "+57 123 456 789",
@@ -49,8 +50,8 @@ const data = [
     },
     {
         nombre: "Dra. Laura Fernández Ruiz",
-        especialidad: "Ginecología y Obstetricia",
-        ubicacion: "Clínica de la Mujer, Av. Constitución #234, Santiago, Chile",
+        especialidad: "Ginecologia y Obstetricia",
+        ubicacion: "Piso 2",
         horarios: "Lunes a viernes de 10:00 a.m. a 6:00 p.m.",
         contacto: {
             telefono: "+56 9 8765 4321",
@@ -61,8 +62,8 @@ const data = [
     },
     {
         nombre: "Dr. José García Martínez",
-        especialidad: "Medicina Interna",
-        ubicacion: "Centro Médico Integral, Av. Independencia #567, Buenos Aires, Argentina",
+        especialidad: "Medicina General",
+        ubicacion: "Piso 1",
         horarios: "Martes y jueves de 10:00 a.m. a 4:00 p.m.",
         contacto: {
             telefono: "+54 11 2345 6789",
@@ -73,7 +74,7 @@ const data = [
     },
     {
         nombre: "Dra. Marta Rodríguez Gómez",
-        especialidad: "Psiquiatría",
+        especialidad: "Oftalmologia",
         ubicacion: "Centro de Salud Mental, Calle Mayor #789, Madrid, España",
         horarios: "Lunes a viernes de 9:00 a.m. a 5:00 p.m.",
         contacto: {
@@ -85,7 +86,7 @@ const data = [
     },
     {
         nombre: "Dr. Luis Hernández Flores",
-        especialidad: "Oftalmología",
+        especialidad: "Oftalmologia",
         ubicacion: "Clínica de Ojos Visión Clara, Av. Revolución #123, Ciudad de México",
         horarios: "Martes a viernes de 8:00 a.m. a 3:00 p.m.",
         contacto: {
@@ -97,7 +98,7 @@ const data = [
     },
     {
         nombre: "Dra. Ana López Martínez",
-        especialidad: "Endocrinología",
+        especialidad: "Pediatria",
         ubicacion: "Centro de Endocrinología Integral, Calle San Juan #456, Buenos Aires, Argentina",
         horarios: "Lunes a viernes de 10:00 a.m. a 6:00 p.m.",
         contacto: {
@@ -109,7 +110,7 @@ const data = [
     },
     {
         nombre: "Dr. Javier Ramírez Pérez",
-        especialidad: "Cirugía General",
+        especialidad: "Pediatria",
         ubicacion: "Hospital San Lucas, Av. Principal #789, Santiago, Chile",
         horarios: "Martes y jueves de 9:00 a.m. a 3:00 p.m.",
         contacto: {
